@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "projects": {
+    "title": {
+      "projectType": "library",
+      "root": "",
+      "sourceRoot": "./src",
+      "prefix": "ngsm",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "./tsconfig.lib.json",
+            "project": "./ng-package.json"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "./tsconfig.lib.json",
+              "./tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!./**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "./jest.config.js",
+            "tsConfig": "./tsconfig.spec.json",
+            "setupFile": "./src/test-setup.ts",
+            "passWithNoTests": true,
+            "codeCoverage": true
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "title"
+}
