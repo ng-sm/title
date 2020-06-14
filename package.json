@@ -1,6 +1,6 @@
 {
   "name": "@ngsm/title",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "private": false,
   "dependencies": {
     "@angular/common": "^9.1.0",
