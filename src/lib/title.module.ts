@@ -1,11 +1,17 @@
 import { CommonModule } from '@angular/common';
 import { NgModule, ModuleWithProviders } from '@angular/core';
+import { TranslateModule } from '@ngx-translate/core';
 import { TitleService } from './shared/title.service';
 import { TitleConfig } from './shared/title.model';
 
 @NgModule({
-  imports: [CommonModule],
-  providers: [TitleService],
+  imports: [
+    CommonModule,
+    TranslateModule
+  ],
+  providers: [
+    TitleService,
+  ],
 })
 export class TitleModule {
   static forRoot(titleConfig: TitleConfig): ModuleWithProviders {
