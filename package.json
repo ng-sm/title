@@ -20,7 +20,7 @@
     "@angular/compiler-cli": "~9.1.0",
     "@types/jest": "25.1.4",
     "@nrwl/jest": "9.2.3",
-    "ng-packagr": "^9.0.0",
+    "ng-packagr": "^10.1.1",
     "tsickle": "^0.38.1",
     "jest": "25.2.4",
     "jest-preset-angular": "8.1.3"
